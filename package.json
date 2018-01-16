@@ -1,7 +1,7 @@
 {
   "name": "can-use-storage-check",
   "description": "Checker of sync/async storage usability.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Jake Oswaldo",
   "keywords": [
@@ -9,10 +9,10 @@
     "check",
     "valid"
   ],
-  "homepage": "",
-  "repository": "",
+  "homepage": "https://github.com/jakkyo/canUseStorageCheck#readme",
+  "repository": "jakkyo/canUseStorageCheck",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/jakkyo/canUseStorageCheck/issues"
   },
   "main": "dist/can-use-storage-check.js",
   "module": "dist/can-use-storage-check.es.js",
