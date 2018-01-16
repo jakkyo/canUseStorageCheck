@@ -1,0 +1,64 @@
+{
+  "name": "can-use-storage-check",
+  "description": "Checker of sync/async storage usability.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Jake Oswaldo",
+  "keywords": [
+    "storage",
+    "check",
+    "valid"
+  ],
+  "homepage": "",
+  "repository": "",
+  "bugs": {
+    "url": ""
+  },
+  "main": "dist/can-use-storage-check.js",
+  "module": "dist/can-use-storage-check.es.js",
+  "jsnext:main": "dist/can-use-storage-check.es.js",
+  "umd:main": "dist/can-use-storage-check.umd.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && microbundle --external all --name createPersistedState src/index.js",
+    "precommit": "npm run build && lint-staged",
+    "prepublish": "npm run build",
+    "test": "npm-run-all test:**",
+    "test:jest": "jest --env=jsdom",
+    "test:size": "bundlesize"
+  },
+  "lint-staged": {
+    "index.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/*.js",
+      "threshold": "300b"
+    }
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "bundlesize": "^0.15.3",
+    "dom-storage": "^2.0.2",
+    "eslint": "^4.11.0",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^5.0.0",
+    "microbundle": "^0.2.4",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.8.2",
+    "rimraf": "^2.6.2"
+  }
+}
