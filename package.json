@@ -1,7 +1,7 @@
 {
   "name": "can-use-storage-check",
   "description": "Checker of sync/async storage usability.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Jake Oswaldo",
   "keywords": [
